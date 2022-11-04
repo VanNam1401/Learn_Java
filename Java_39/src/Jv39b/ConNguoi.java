@@ -1,3 +1,5 @@
+package Jv39b;
+
 
 public class ConNguoi {
 	private String hoVaTen;

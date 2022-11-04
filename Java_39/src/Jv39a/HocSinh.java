@@ -1,3 +1,4 @@
+package Jv39a;
 
 public class HocSinh {
 	private String hoVaTen;

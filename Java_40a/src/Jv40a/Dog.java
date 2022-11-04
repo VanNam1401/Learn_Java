@@ -1,3 +1,4 @@
+package Jv40a;
 
 public class Dog extends Animal{
 

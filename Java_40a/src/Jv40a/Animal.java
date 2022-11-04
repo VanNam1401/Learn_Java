@@ -1,3 +1,4 @@
+package Jv40a;
 
 public class Animal {
 	protected String name;
