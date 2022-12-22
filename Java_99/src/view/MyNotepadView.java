@@ -45,25 +45,6 @@ public class MyNotepadView extends JFrame {
 	public JLabel lblNewLabel;
 	public JTextArea textArea;
 
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					MyNotepadView frame = new MyNotepadView();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
-
-	/**
-	 * Create the frame.
-	 */
 	public MyNotepadView() {
 		this.model = new MyNotepadModel();
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

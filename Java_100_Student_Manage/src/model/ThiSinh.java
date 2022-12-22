@@ -1,10 +1,11 @@
 package model;
 
-import java.sql.Date;
+import java.io.Serializable;
+import java.util.Date;
 import java.util.Objects;
 
-public class ThiSinh {
-	private int maThisinh;
+public class ThiSinh implements Serializable {
+	private int maThiSinh;
 	private String tenThiSinh;
 	private Tinh queQuan;
 	private Date ngaySinh;
@@ -12,13 +13,11 @@ public class ThiSinh {
 	private float diemMon1, diemMon2, diemMon3;
 
 	public ThiSinh() {
-		super();
 	}
 
-	public ThiSinh(int maThisinh, String tenThiSinh, Tinh queQuan, Date ngaySinh, boolean gioiTinh, float diemMon1,
+	public ThiSinh(int maThiSinh, String tenThiSinh, Tinh queQuan, Date ngaySinh, boolean gioiTinh, float diemMon1,
 			float diemMon2, float diemMon3) {
-		super();
-		this.maThisinh = maThisinh;
+		this.maThiSinh = maThiSinh;
 		this.tenThiSinh = tenThiSinh;
 		this.queQuan = queQuan;
 		this.ngaySinh = ngaySinh;
@@ -28,12 +27,12 @@ public class ThiSinh {
 		this.diemMon3 = diemMon3;
 	}
 
-	public int getMaThisinh() {
-		return maThisinh;
+	public int getMaThiSinh() {
+		return maThiSinh;
 	}
 
-	public void setMaThisinh(int maThisinh) {
-		this.maThisinh = maThisinh;
+	public void setMaThiSinh(int maThiSinh) {
+		this.maThiSinh = maThiSinh;
 	}
 
 	public String getTenThiSinh() {
@@ -93,24 +92,9 @@ public class ThiSinh {
 	}
 
 	@Override
-	public int hashCode() {
-		return Objects.hash(diemMon1, diemMon2, diemMon3, gioiTinh, maThisinh, ngaySinh, queQuan, tenThiSinh);
+	public String toString() {
+		return "ThiSinh [maThiSinh=" + maThiSinh + ", tenThiSinh=" + tenThiSinh + ", queQuan=" + queQuan + ", ngaySinh="
+				+ ngaySinh + ", gioiTinh=" + gioiTinh + ", diemMon1=" + diemMon1 + ", diemMon2=" + diemMon2
+				+ ", diemMon3=" + diemMon3 + "]";
 	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		ThiSinh other = (ThiSinh) obj;
-		return Float.floatToIntBits(diemMon1) == Float.floatToIntBits(other.diemMon1)
-				&& Float.floatToIntBits(diemMon2) == Float.floatToIntBits(other.diemMon2)
-				&& Float.floatToIntBits(diemMon3) == Float.floatToIntBits(other.diemMon3) && gioiTinh == other.gioiTinh
-				&& maThisinh == other.maThisinh && Objects.equals(ngaySinh, other.ngaySinh)
-				&& Objects.equals(queQuan, other.queQuan) && Objects.equals(tenThiSinh, other.tenThiSinh);
-	}
-
 }

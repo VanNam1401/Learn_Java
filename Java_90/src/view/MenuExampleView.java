@@ -35,7 +35,7 @@ public class MenuExampleView extends JFrame {
 		jMenu_file.setMnemonic(KeyEvent.VK_F);
 
 		// tạo các item menu.
-		JMenuItem jMenuItem_new = new JMenuItem("New", KeyEvent.VK_N);
+		JMenuItem jMenuItem_new = new JMenuItem("New");
 		jMenuItem_new.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_N,InputEvent.CTRL_DOWN_MASK));
 		jMenuItem_new.addActionListener(menu);
 		JMenuItem jMenuItem_open = new JMenuItem("Open", KeyEvent.VK_O);

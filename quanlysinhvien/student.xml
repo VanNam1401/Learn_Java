@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<students>
+    <student>
+        <id>3</id>
+        <name>Dai Bang</name>
+        <age>24</age>
+        <address>Ha Nam</address>
+        <gpa>9.0</gpa>
+    </student>
+    <student>
+        <id>2</id>
+        <name>Vinh The Mac</name>
+        <age>23</age>
+        <address>Vinh Phuc</address>
+        <gpa>9.5</gpa>
+    </student>
+    <student>
+        <id>3</id>
+        <name>nam</name>
+        <age>12</age>
+        <address>quảng anm</address>
+        <gpa>3.0</gpa>
+    </student>
+</students>

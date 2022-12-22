@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<students>
+    <student>
+        <id>1</id>
+        <name>d</name>
+        <age>3</age>
+        <address>dfad</address>
+        <gpa>3.0</gpa>
+    </student>
+</students>
