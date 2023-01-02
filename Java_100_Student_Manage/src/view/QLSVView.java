@@ -14,6 +14,8 @@ import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
 import javax.swing.JSeparator;
 import java.awt.Font;
+import java.awt.Image;
+import java.awt.Toolkit;
 import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.FileInputStream;
@@ -27,6 +29,8 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.Set;
 import java.util.TreeSet;
+
+import javax.print.DocFlavor.URL;
 import javax.swing.Box;
 import javax.swing.ButtonGroup;
 import javax.swing.JLabel;
@@ -66,6 +70,9 @@ public class QLSVView extends JFrame {
 		this.setLocationRelativeTo(null);
 		setBounds(100, 100, 774, 751);
 
+		 java.net.URL urllUrl = QLSVView.class.getResource("student.icon.png");
+	        Image image = Toolkit.getDefaultToolkit().createImage(urllUrl);
+	        this.setIconImage(image);
 		ActionListener action = new QLSVController(this);
 
 		JMenuBar menuBar = new JMenuBar();
@@ -153,9 +160,13 @@ public class QLSVView extends JFrame {
 
 		table = new JTable();
 		table.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		table.setModel(new DefaultTableModel(new Object[][] {},
-				new String[] { "M\u00E3 th\u00ED sinh", "H\u1ECD t\u00EAn", "Qu\u00EA qu\u00E1n", "Ng\u00E0y sinh",
-						"Gi\u1EDBi t\u00EDnh", "\u0110i\u1EC3m 1", "\u0110i\u1EC3m 2", "\u0110i\u1EC3m 3" }));
+		table.setModel(new DefaultTableModel(
+			new Object[][] {
+			},
+			new String[] {
+				"M\u00E3 th\u00ED sinh", "H\u1ECD t\u00EAn", "Qu\u00EA qu\u00E1n", "Ng\u00E0y sinh", "Gi\u1EDBi t\u00EDnh", "\u0110i\u1EC3m 1", "\u0110i\u1EC3m 2", "\u0110i\u1EC3m 3"
+			}
+		));
 		table.getColumnModel().getColumn(1).setPreferredWidth(137);
 		table.getColumnModel().getColumn(2).setPreferredWidth(83);
 		table.getColumnModel().getColumn(3).setPreferredWidth(88);

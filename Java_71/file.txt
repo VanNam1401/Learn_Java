@@ -1,0 +1,3 @@
+xin chaoDu lieu: 
+3.14PI
+Student [id=10, nameString=Nam]
